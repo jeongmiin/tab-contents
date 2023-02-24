@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴 링크 이동</title>
+
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tab_style.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/tab_style.js"></script>
+</head>
+<body>
+    <!-- Tab Style - Basic -->
+    <div class="tab_contents">
+        <ul class="tab_cont_menu">
+            <li data-tab="content_1" class="active">tab menu1</li>
+            <li data-tab="content_2">tab menu2</li>
+            <li data-tab="content_3">tab menu3</li>
+        </ul>
+        <div class="tab_cont_wrap">
+            <div id="content_1" class="tab_cont active">tab menu1 contents</div>
+            <div id="content_2" class="tab_cont">tab menu2 contents</div>
+            <div id="content_3" class="tab_cont">tab menu3 contents</div>
+        </div>
+    </div>
+
+
+    <!-- Tab Style - Slide -->
+    <div class="tab_contents">
+        <div class="tab_cont_menu_wrap">
+            <div class="grid3 mark"></div>
+            <ul class="grid grid3 tab_cont_menu active_slide">
+                <li data-tab="content_4" class="item active">tab menu4</li>
+                <li data-tab="content_5" class="item">tab menu5</li>
+                <li data-tab="content_6" class="item">tab menu6</li>
+            </ul>
+        </div>
+        <div class="tab_cont_wrap">
+            <div id="content_4" class="tab_cont active">tab menu4 contents</div>
+            <div id="content_5" class="tab_cont">tab menu5 contents</div>
+            <div id="content_6" class="tab_cont">tab menu6 contents</div>
+        </div>
+    </div>
+</body>
+</html>

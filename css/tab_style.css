@@ -1,0 +1,27 @@
+/* layout */
+.grid { display: flex; align-self: stretch; flex-wrap: wrap; margin: -2px; }
+.grid .item { margin: 2px; }
+.grid2 .item { width: calc(50% - 4px); }
+.grid3 .item { width: calc(33.33% - 4px); }
+.grid4 .item { width: calc(25% - 4px); }
+
+/* tab contents - basic style */
+.tab_contents + .tab_contents { margin-top: 200px; }
+.tab_cont_menu { width: 100%; text-align: center; display: flex; justify-content: center; border-bottom: solid 1px #eee; background-color: #fff; }
+.tab_cont_menu > li { position: relative; cursor: pointer; padding: 1em 0; margin: 0 0.9em;  color: #666; }
+.tab_cont_menu > li.active { font-weight: 700; color: #000; }
+.tab_cont_menu > li.active::after { content: ''; width: 100%; height: 3px; background-color: #2a3143; position: absolute; left: 0; bottom: 0; }
+.tab_cont_wrap .tab_cont { display: none; }
+.tab_cont_wrap .tab_cont.active { display: block; }
+.tab_contents.menu_fixed .tab_cont_menu { position: fixed; top: 0; left: 0; z-index: 50; }
+.tab_contents.menu_fixed .tab_cont_menu > li { padding: 0; line-height: 44px; font-size: 0.875em; }
+.tab_contents.menu_fixed .tab_cont_wrap { padding-top: calc(3em + 1px); }
+
+/* tab contents - menu slide style */
+.tab_cont_menu_wrap { position: relative; }
+.tab_cont_menu_wrap .mark { height: calc(100% - 4px); border-radius: 10em; background-color: #fff; position: absolute; left: 0; top: 0; transition: 0.2s; box-sizing: content-box; border: 2px solid #f1f1f3; margin: 0!important; }
+.tab_cont_menu_wrap .mark.grid2 { width: calc(50% - 4px); }
+.tab_cont_menu_wrap .mark.grid3 { width: calc(33.33% - 4px); }
+.tab_cont_menu_wrap .mark.grid4 { width: calc(25% - 4px); } 
+.tab_cont_menu.active_slide { text-align: center; background-color: #f1f1f3; border-radius: 10em; border-bottom: none; }
+.tab_cont_menu.active_slide > li.active::after { display: none; }
